@@ -1,3 +1,3 @@
 # mern hollow coves
 
-Our Search Jobs API allows you to scrape results from a Bing Jobs search.
+Our Bing Jobs API allows you to scrape results from a Bing Jobs search.
