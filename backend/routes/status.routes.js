@@ -4,5 +4,6 @@ import StatusCtrl from "../controllers/status.controller.js";
 const router = express.Router();
 
 router.route("/api").get(StatusCtrl.getStatusApi);
+router.route("/server").get(StatusCtrl.getStatusServer);
 
 export default router;
