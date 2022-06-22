@@ -27,10 +27,10 @@ export default class StatusController {
 	}
 
 	static async getStatusServer(req, res) {
-		const domain = process.env.PROJECT_API_DOMAIN;
+		const link = process.env.PROJECT_BASE_URL;
 		axios
-			.get(`${domain}`)
-			.then(function (response) {
+			.get(`${link}`)
+			.then((response) => {
 				let resp = {
 					msg: "Current Server status",
 					name: process.env.PROJECT_SERVER_NAME,
@@ -39,7 +39,7 @@ export default class StatusController {
 					uptime: new Date().getTime(),
 					connection: response.connection,
 					hash: uuidv4(),
-					server_domain: domain,
+					server_domain: link,
 					status_text: `${response.statusText}`,
 					status: `${response.status}`,
 				};
